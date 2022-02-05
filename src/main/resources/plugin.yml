@@ -1,0 +1,10 @@
+name: JgServerWarp
+version: '${project.version}'
+main: com.github.sirokuri_.jgserverwarp.JgServerWarp
+api-version: 1.17
+authors: [ 46kuri_ ]
+description: JGPlugin
+
+commands:
+  JgServerWarp:
+    description: サーバー移動用アイテム入手コマンド
