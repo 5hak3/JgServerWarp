@@ -12,7 +12,7 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class JgServerWarpInteract implements Listener {
+public class JgServerWarpInteract implements Listener{
 
     private final JgServerWarp plugin;
 
@@ -32,7 +32,6 @@ public class JgServerWarpInteract implements Listener {
                 if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK){
                     player.performCommand("advancedportals warp jg");
                     plugin.getLogger().info(player.getName() + " issued server command: /advancedportals warp jg");
-
                 }
                 if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
                     player.performCommand("advancedportals warp jg1");
