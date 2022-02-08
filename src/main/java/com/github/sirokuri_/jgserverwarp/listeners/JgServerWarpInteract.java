@@ -27,7 +27,7 @@ public class JgServerWarpInteract implements Listener{
         if ((event.getHand() != EquipmentSlot.HAND)) return;
         String config = plugin.config().getString("serverName");
         if (config == null || config.equals("Default")){
-            player.sendMessage(ChatColor.RED +"正しくサーバー名が指定されていません。運営へ報告しましょう");
+            player.sendMessage(ChatColor.RED + "正しくサーバー名が指定されていません。" + ChatColor.DARK_PURPLE + "スクショをした上で" + ChatColor.RED + "運営へ報告しましょう");
             return;
         }
         ItemMeta itemMeta = itemStack.getItemMeta();
@@ -42,7 +42,7 @@ public class JgServerWarpInteract implements Listener{
                         player.performCommand("advancedPortals warp jg");
                         plugin.getLogger().info(player.getName() + " issued server command: /advancedPortals warp jg");
                     } else {
-                        player.sendMessage(ChatColor.RED + "正しくサーバー名が指定されていません。運営へ報告しましょう");
+                        player.sendMessage(ChatColor.RED + "正しくサーバー名が指定されていません。" + ChatColor.DARK_PURPLE + "スクショをした上で" + ChatColor.RED + "運営へ報告しましょう");
                     }
                 }
             }
