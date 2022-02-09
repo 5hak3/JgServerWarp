@@ -51,16 +51,15 @@ public class JgServerWarpInteract implements Listener{
     @EventHandler
     public void onClick(InventoryClickEvent e) {
         Player player = (Player) e.getView().getPlayer();
-        Inventory inventory = e.getClickedInventory();
+        Inventory inventory = e.getInventory();
         ItemStack slot = e.getCurrentItem();
         String config = plugin.config().getString("serverName");
         if (config == null || config.equals("Default")) return;
         if (slot == null) return;
-        if (inventory == null) return;
         InventoryHolder inventoryHolder = inventory.getHolder();
         if(!(inventoryHolder instanceof JgServerWarpHolder)) return;
         JgServerWarpHolder holder = (JgServerWarpHolder) inventoryHolder;
-        if(holder.tags.get(0).equals("holder1")) {
+        if (holder.tags.get(0).equals("holder1")) {
             ItemMeta itemMeta = slot.getItemMeta();
             if (itemMeta == null) return;
             if (slot.getType() == Material.GREEN_STAINED_GLASS_PANE) {
