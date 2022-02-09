@@ -1,6 +1,7 @@
 package com.github.sirokuri_.jgserverwarp;
 
 import com.github.sirokuri_.jgserverwarp.command.JgServerWarpCommand;
+import com.github.sirokuri_.jgserverwarp.listeners.JgServerWarpGUIClick;
 import com.github.sirokuri_.jgserverwarp.listeners.JgServerWarpInteract;
 import com.github.sirokuri_.jgserverwarp.listeners.JgServerWarpJoin;
 import org.bukkit.ChatColor;
@@ -20,6 +21,7 @@ public final class JgServerWarp extends JavaPlugin {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new JgServerWarpJoin(this), this);
         getServer().getPluginManager().registerEvents(new JgServerWarpInteract(this), this);
+        getServer().getPluginManager().registerEvents(new JgServerWarpGUIClick(this), this);
         getCommand("JgServerWarp").setExecutor(new JgServerWarpCommand(this));
         saveDefaultConfig();
     }
