@@ -29,13 +29,17 @@ public class JgServerWarpCommand implements CommandExecutor {
                 return true;
             }
             if (args[0].equalsIgnoreCase("give")) {
-                ItemStack itemStack1 = plugin.getItem();
-                player.getInventory().addItem(itemStack1);
-                return true;
+                if (sender.hasPermission("JgServerWarpCommand.permission.Admin")) {
+                    ItemStack itemStack1 = plugin.getItem();
+                    player.getInventory().addItem(itemStack1);
+                    return true;
+                }
             }
             if (args[0].equalsIgnoreCase("reload")){
-                plugin.reload();
-                player.sendMessage("config reload...");
+                if (sender.hasPermission("JgServerWarpCommand.permission.Admin")) {
+                    plugin.reload();
+                    player.sendMessage("config reload...");
+                }
             }
             if (args[0].equalsIgnoreCase("gui")){
                 Inventory gui = Bukkit.createInventory(new JgServerWarpHolder("holder1"), 18, "§cJG SERVER WARP");

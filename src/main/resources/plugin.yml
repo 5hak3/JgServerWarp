@@ -7,4 +7,11 @@ description: JGPlugin
 
 commands:
   JgServerWarp:
-    description: サーバー移動用アイテム入手コマンド
+    description: サーバー移動用関連コマンド
+    permission: JgServerWarpCommand.permission.Member
+
+permissions:
+  JgServerWarpCommand.permission.Admin:
+    default: op
+  JgServerWarpCommand.permission.Member:
+    default: true
