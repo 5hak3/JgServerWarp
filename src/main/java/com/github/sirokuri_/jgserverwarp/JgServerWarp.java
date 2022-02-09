@@ -35,7 +35,7 @@ public final class JgServerWarp extends JavaPlugin {
         ItemStack itemStack = new ItemStack(Material.PAPER);
         ItemMeta itemMeta = itemStack.getItemMeta();
         if (itemMeta == null) return null;
-        itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&ajg内でサーバ移動をする"));
+        itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&a&lJG Server選択"));
         List<String> lore = new ArrayList<String>();
         lore.add(ChatColor.translateAlternateColorCodes('&', "&d右クリックでGUIを展開できます"));
         lore.add(ChatColor.translateAlternateColorCodes('&', "&dこのアイテムを無くした場合は"));
