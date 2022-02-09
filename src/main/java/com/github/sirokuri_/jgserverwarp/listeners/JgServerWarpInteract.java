@@ -35,15 +35,13 @@ public class JgServerWarpInteract implements Listener{
         }
         ItemMeta itemMeta = itemStack.getItemMeta();
         if (itemMeta == null) return;
-        if (itemStack.getType() == Material.PAPER){
-            if (itemMeta.getDisplayName().equals(ChatColor.GREEN + "jg内でサーバ移動をする")){
-                if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK){
-                    if (config.equals("jg") || config.equals("jg1")){
-                        player.performCommand("JgServerWarp gui");
-                    } else {
-                        player.sendMessage(ChatColor.RED + "正しくサーバー名が指定されていません。" + ChatColor.DARK_PURPLE + "スクショをした上で" + ChatColor.RED + "運営へ報告しましょう");
-                    }
-                }
+        if (!(itemStack.getType() == Material.PAPER)) return;
+        if (itemMeta.getDisplayName().equals(ChatColor.GREEN + "jg内でサーバ移動をする")) {
+            if (!(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
+            if (config.equals("jg") || config.equals("jg1")){
+                player.performCommand("JgServerWarp gui");
+            } else {
+                player.sendMessage(ChatColor.RED + "正しくサーバー名が指定されていません。" + ChatColor.DARK_PURPLE + "スクショをした上で" + ChatColor.RED + "運営へ報告しましょう");
             }
         }
     }
