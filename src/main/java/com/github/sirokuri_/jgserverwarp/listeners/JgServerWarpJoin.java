@@ -26,8 +26,8 @@ public class JgServerWarpJoin implements Listener {
             inventory.addItem(itemStack);
         }
     }
-
-    @EventHandler
+    //現状不要な機能
+    /*@EventHandler
     public void onChangeWorld(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
         Inventory inventory = player.getInventory();
@@ -35,5 +35,5 @@ public class JgServerWarpJoin implements Listener {
         if (!inventory.contains(itemStack)){
             inventory.addItem(itemStack);
         }
-    }
+    }*/
 }
